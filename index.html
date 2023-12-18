@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="components.css" ></link>
+    <style>
+        .test{
+            display: grid;
+            grid-template-columns: 250px 100px;
+        }
+        .test2{
+            display: grid;
+            grid-template-columns: 500px 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="test">
+        <div style="width: 200px;">
+            <div id="component1"></div>
+        </div>
+        <div>
+            <button id="getvalue1">Get Value</button>
+        </div>
+    </div>
+
+    <div class="test">
+        <div style="width: 200px;">
+            <div id="component2"></div>
+        </div>
+        <div>
+            <button id="getvalue2">Get Value</button>
+        </div>
+    </div> -->
+
+
+
+    <div class="test2">
+        <div style="width: 400px;">
+            <div id="component3" classs="static-selection-input">
+                <div class="static-selection-input-main">
+                    <div class="static-selection-input-label">
+                        <p>Count/Unit</p>
+                    </div>
+                    <div class="static-selection-input-choices">
+                        <div class="static-selection-input-choice-item">
+                            <p>1.0</p>
+                        </div>
+                        <div class="static-selection-input-choice-item">
+                            <p>2.0</p>
+                        </div>
+                        <div class="static-selection-input-choice-item">
+                            <p>3.0</p>
+                        </div>
+                        <div class="static-selection-input-choice-item selected">
+                            <p>4.0</p>
+                        </div>
+                        <div class="static-selection-input-choice-item clearborder">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="getvalue3">Get Value</button>
+        </div>
+    </div>
+
+    
+
+    <script src="components.js" ></script>
+    <script>
+
+        // test 1 
+        const options1 = {
+            choices: [
+                ['Test','Test Value']
+            ]
+        }
+        const multiselect1 = new Multiselect(
+            $('#component1'),
+            options1
+        )
+        
+        multiselect1.renderMultiselectTemplate()
+
+        // test 2 
+        const options2 = {
+            label: "test",
+            choices: [
+                ['Test1','Test Value1'],
+                ['Test2','Test Value2']
+            ]
+        }
+        const multiselect2 = new Multiselect(
+            $('#component2'),
+            options2
+        )
+
+        multiselect2.renderMultiselectTemplate()
+
+        // const get = document.getElementById('getvalue1')
+        // get.addEventListener('click',function(){
+        //     console.log(multiselect.getSelection())
+        // })
+
+
+
+        $(document).ready(function(){
+            $(".static-selection-input-choice-item").on('click',function(){
+                $(".static-selection-input-choice-item.selected").removeClass("selected")
+                $(".static-selection-input-choice-item.clearborder").removeClass("clearborder")
+                $(this).next().addClass("clearborder")
+                $(this).addClass("selected")
+            })
+        })
+
+
+
+        
+    </script>
+    
+</body>
+</html>

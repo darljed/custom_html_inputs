@@ -1,0 +1,111 @@
+/* custom multiselect  */
+
+.custom-multiselect {
+    position: relative;
+    height: 75px;
+} 
+
+.custom-multiselect-input-main {
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #E8EAED;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.custom-multiselect-item {
+    max-height: 75px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+label.input-disabled {
+    color: #708090;
+}
+
+.custom-multiselect-input-dropdown {
+    padding: 10px;
+    border: 1px solid #E8EAED;
+    border-radius: 6px;
+    display: none;
+}
+
+.custom-multiselect-input-dropdown-options {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto 20px;
+}
+
+span.custom-multiselect-selection {
+    padding: 4px 10px;
+    display: inline;
+    background: #E8EAED;
+    border-radius: 15px;
+}
+
+.custom-multiselect-input-main.focused {
+    border: 2px solid #494AE2;
+}
+
+span.custom-multiselect-selection:nth-child(n+2) {
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* custom static-selection  */
+
+.static-selection-input-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 70%;
+    background: #F3F4F6;
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.static-selection-input-choices {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: auto auto auto auto auto;
+    border-radius: 9px;
+    background: #fff;
+}
+
+.static-selection-input-label {
+    margin: auto auto auto 0;
+}
+.static-selection-input-label p,.static-selection-input-choice-item p {
+    margin: 0;
+}
+.static-selection-input-choice-item {
+    border-left: 2px solid #E8EAED;
+    padding: 5px;
+    text-align: center;
+}
+
+.static-selection-input-choice-item:hover {
+    background: rgba(222, 223, 223, 0.2);
+    cursor: pointer;
+}
+.static-selection-input-choice-item:first-child {
+    border: none;
+}
+
+.static-selection-input-choice-item.selected {
+    background: rgb(205 239 217 / 20%);
+    border: 2px solid #CDEFD9;
+    border-radius: 9px;
+}
+
+.static-selection-input-choice-item.clearborder {
+    border: none;
+}
